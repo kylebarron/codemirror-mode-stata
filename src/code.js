@@ -1,41 +1,57 @@
-export const code = `# Some code examples borrowed from https://learnxinyminutes.com/docs/stata/
+export const code = `
+program define excellentProgram
+version 14.0
 
-# Module
-defmodule MyModule do
-  @moduledoc """
-  This is a built-in attribute on a example module.
-  """
+local hi  = \`1'
+local bye = \`2'
+local yes = ln(\`hi')
 
-  # Struct
-  defstruct name: nil, age: 0, height: 0
+* This is a comment
+set obs \`= _N + 1'
+gen neg = 1 - 1 / (1 + exp(score))
+bysort group: egen pos = sum(abs(neg))
 
-  # Function
-  def function_one do
-    {:ok, "one"}
-  end
+/*
+ * Multi line comments are pretty
+ * because they span many lines
+ */
 
-  # Pattern matching
-  def function_two do
-    {:ok, msg} = function_one
-    IO.puts msg
-  end
+reg y x if bool == 1
+xi: reg y2 x i.dummy // This is another comment type
+matrix list \`r(table)'
+levelsof x
+disp \`"\`r(levels)'"'
 
-  # Try/Rescue block
-  def function_three do
-    try do
-      raise "some error"
-    rescue
-      RuntimeError -> "rescued a runtime error"
-      _error -> "this will rescue any error"
-    end
-  end
+di "This is a normal string with a \`local' $global $\{global}"
+di "Nested: $\`=expression'glo$\{glo\`loc\`:extended macro'al'bal}bal"
+di "Escape: \$100 or \\\`local\\\`"
+di \`"This is a "super string" that takes on anything"'
+di "string\`1'two$\{three}" bad \`"string " "' good \`"string " "'
 
-  # Pipes
-  def function_four(start, finish) do
-    Range.new(start, finish)
-    |> Enum.map(fn x -> x * x end)
-    |> Enum.filter(fn x -> rem(x, 2) == 0 end)
-  end
+global HelloThisIsAVeryLengthyGlobalYes 23
+local RandomLocalAlsoVeryLongName ThisIsAVeryLengthyGlobal
+disp "$\{Hello\`RandomLocalAlsoVeryLongName'Yes}"
+disp %21.0gc _N
+
+// This also works at line starts
+adopath ++ "$\{lib}/code/ado/"
+cap adopath - SITE
+cap adopath - PLUS
+/*cap adopath - PERSONAL
+/*Nested*/
+cap adopath - OLDPLACE*/
+
+forval i = 1 / 4\{
+  cap reg y x\`i', robust
+  if \`i' == 2 \{
+    local c = _b[_cons]
+    local b = _b[x\`i']
+    local x = ln(\`i')
+  }
+}
+
+* Something about how mata is really a second language within Stata
+mata: mata mlib index
 end
 `
 
