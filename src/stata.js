@@ -1,7 +1,7 @@
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: https://codemirror.net/LICENSE
 import CodeMirror from 'codemirror';
-import defineSimpleMode from './codemirror-simple-mode'
+import 'codemirror/addon/mode/simple';
 
 // "use strict";
 
@@ -411,7 +411,7 @@ var builtins_functions = [
     'yh', 'ym', 'yofd', 'yq', 'yw'];
 var builtins_fun_str = '(' + builtins_functions.join('|') + ')(?=\\()';
 
-defineSimpleMode("stata",{
+CodeMirror.defineSimpleMode("stata",{
   // The start state contains the rules that are intially used
   start: [
     // Comments
