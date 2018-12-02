@@ -1,6 +1,6 @@
 {
   "name": "codemirror-mode-stata",
-  "version": "1.1.2",
+  "version": "0.1.0",
   "description": "A CodeMirror mode for the Stata language",
   "keywords": [
     "codemirror",
@@ -22,10 +22,10 @@
     "lint": "eslint --ext .js,.vue src index.js"
   },
   "repository": {
-    "url": "git@github.com:optick/codemirror-mode-stata.git",
+    "url": "git@github.com:kylebarron/codemirror-mode-stata.git",
     "type": "git"
   },
-  "author": "Ian Walter <public@iankwalter.com>",
+  "author": "Kyle Barron <kylebarron2@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
     "codemirror": "^5.20.2"

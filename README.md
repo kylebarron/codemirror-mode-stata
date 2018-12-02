@@ -36,14 +36,4 @@ npm install codemirror codemirror-mode-stata --save
 
 MIT - See [LICENSE][licenseUrl]
 
-&nbsp;
-
-Created by [Ian Walter](https://iankwalter.com)
-
-&nbsp;
-
-<a href="https://www.netlify.com">
-  <img src="https://www.netlify.com/img/global/badges/netlify-light.svg">
-</a>
-
-[licenseUrl]: https://github.com/ianwalter/codemirror-mode-stata/blob/master/LICENSE
+[licenseUrl]: https://github.com/kylebarron/codemirror-mode-stata/blob/master/LICENSE
