@@ -1,18 +1,18 @@
 {
-  "name": "codemirror-mode-elixir",
+  "name": "codemirror-mode-stata",
   "version": "1.1.2",
-  "description": "A CodeMirror mode for the Elixir language",
+  "description": "A CodeMirror mode for the Stata language",
   "keywords": [
     "codemirror",
-    "elixir",
+    "stata",
     "mode"
   ],
   "files": [
     "dist"
   ],
-  "main": "dist/codemirror-mode-elixir.js",
-  "umd:main": "dist/codemirror-mode-elixir.umd.js",
-  "module": "dist/codemirror-mode-elixir.m.js",
+  "main": "dist/codemirror-mode-stata.js",
+  "umd:main": "dist/codemirror-mode-stata.umd.js",
+  "module": "dist/codemirror-mode-stata.m.js",
   "scripts": {
     "build": "microbundle build index.js --compress false",
     "watch": "microbundle watch index.js --compress false",
@@ -22,7 +22,7 @@
     "lint": "eslint --ext .js,.vue src index.js"
   },
   "repository": {
-    "url": "git@github.com:optick/codemirror-mode-elixir.git",
+    "url": "git@github.com:optick/codemirror-mode-stata.git",
     "type": "git"
   },
   "author": "Ian Walter <public@iankwalter.com>",

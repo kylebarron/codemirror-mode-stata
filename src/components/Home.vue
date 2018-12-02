@@ -26,8 +26,8 @@
           <div class="fontWeight600 width30">1.</div>
 
           <div class="flex1">
-            Install codemirror-mode elixir from NPM:
-            <code class="padding4">npm install codemirror-mode-elixir</code>
+            Install codemirror-mode stata from NPM:
+            <code class="padding4">npm install codemirror-mode-stata</code>
           </div>
 
         </div>
@@ -39,7 +39,7 @@
 
           <div class="flex1">
 
-            Include codemirror-mode-elixir into your project.
+            Include codemirror-mode-stata into your project.
 
             <form class="editor borderRadius3 padding10 marginTop20">
               <textarea id="import" v-model="jsImport" />
@@ -62,7 +62,7 @@
 
           <div class="flex1">
 
-            Set 'elixir' as the mode when creating the CodeMirror editor.
+            Set 'stata' as the mode when creating the CodeMirror editor.
 
             <form class="editor borderRadius3 padding10 marginTop20">
               <textarea id="create" v-model="create"></textarea>
@@ -82,7 +82,7 @@
   import CodeMirror from 'codemirror'
   import '../../node_modules/codemirror/mode/javascript/javascript'
   import '../../node_modules/codemirror/mode/htmlmixed/htmlmixed'
-  import '../../dist/codemirror-mode-elixir'
+  import '../../dist/codemirror-mode-stata'
   import { code, htmlScript, jsImport, create } from '../code'
 
   const htmlOpts = {
@@ -92,7 +92,7 @@
     theme: 'material'
   }
   const jsOpts = Object.assign({}, htmlOpts, { mode: 'javascript' })
-  const elixirOpts = Object.assign({}, htmlOpts, { mode: 'elixir' })
+  const stataOpts = Object.assign({}, htmlOpts, { mode: 'stata' })
 
   export default {
     data: () => ({
@@ -103,7 +103,7 @@
       create
     }),
     mounted () {
-      CodeMirror.fromTextArea(document.querySelector('#code'), elixirOpts)
+      CodeMirror.fromTextArea(document.querySelector('#code'), stataOpts)
       CodeMirror.fromTextArea(document.querySelector('#import'), jsOpts)
       CodeMirror.fromTextArea(document.querySelector('#script'), htmlOpts)
       CodeMirror.fromTextArea(document.querySelector('#create'), jsOpts)

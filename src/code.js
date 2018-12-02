@@ -1,4 +1,4 @@
-export const code = `# Some code examples borrowed from https://learnxinyminutes.com/docs/elixir/
+export const code = `# Some code examples borrowed from https://learnxinyminutes.com/docs/stata/
 
 # Module
 defmodule MyModule do
@@ -39,13 +39,13 @@ defmodule MyModule do
 end
 `
 
-export const htmlScript = `<!-- You can simply add elixir.js as a script tag: -->
+export const htmlScript = `<!-- You can simply add stata.js as a script tag: -->
 <script src="js/codemirror.js"></script>
-<script src="js/codemirror-mode-elixir/dist/elixir.js"></script>`
+<script src="js/codemirror-mode-stata/dist/stata.js"></script>`
 
 export const jsImport = `// If you're using frontend build tools like Webpack and Babel,
 // you can simply import the module and register the mode:
 import CodeMirror from 'codemirror'
-import 'codemirror-mode-elixir'`
+import 'codemirror-mode-stata'`
 
-export const create = `CodeMirror.fromTextArea(document.getElementById('code'), { mode: 'elixir' })`
+export const create = `CodeMirror.fromTextArea(document.getElementById('code'), { mode: 'stata' })`

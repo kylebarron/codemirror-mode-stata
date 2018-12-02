@@ -1,8 +1,8 @@
-// CodeMirror Mode Elixir, copyright (c) by Marijn Haverbeke, Ian Walter, and
+// CodeMirror Mode Stata, copyright (c) by Marijn Haverbeke, Ian Walter, and
 // others. Distributed under an MIT license: http://codemirror.net/LICENSE.
 import CodeMirror from 'codemirror'
 
-CodeMirror.defineMode('elixir', config => {
+CodeMirror.defineMode('stata', config => {
   const wordObj = words => {
     let o = {}
     for (var i = 0, e = words.length; i < e; ++i) o[words[i]] = true
@@ -375,4 +375,4 @@ CodeMirror.defineMode('elixir', config => {
   }
 })
 
-CodeMirror.defineMIME('text/x-elixir', 'elixir')
+CodeMirror.defineMIME('text/x-stata', 'stata')
