@@ -14,8 +14,8 @@
   "umd:main": "dist/codemirror-mode-stata.umd.js",
   "module": "dist/codemirror-mode-stata.m.js",
   "scripts": {
-    "build": "microbundle build index.js --compress false",
-    "watch": "microbundle watch index.js --compress false",
+    "build": "microbundle build src/stata.js --compress false",
+    "watch": "microbundle watch src/stata.js --compress false",
     "site": "webpack",
     "start": "webpack-dev-server",
     "test": "jest",

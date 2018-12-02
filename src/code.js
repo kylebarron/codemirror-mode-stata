@@ -24,7 +24,7 @@ disp \`"\`r(levels)'"'
 
 di "This is a normal string with a \`local' $global $\{global}"
 di "Nested: $\`=expression'glo$\{glo\`loc\`:extended macro'al'bal}bal"
-di "Escape: \$100 or \\\`local\\\`"
+di "Escape: \$100 or \`local'"
 di \`"This is a "super string" that takes on anything"'
 di "string\`1'two$\{three}" bad \`"string " "' good \`"string " "'
 
