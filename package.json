@@ -1,6 +1,6 @@
 {
   "name": "codemirror-mode-stata",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A CodeMirror mode for the Stata language",
   "keywords": [
     "codemirror",
