@@ -492,3 +492,10 @@ CodeMirror.defineSimpleMode("stata",{
 
 CodeMirror.defineMIME('text/x-stata', 'stata');
 CodeMirror.defineMIME('text/stata', 'stata');
+
+CodeMirror.modeInfo.push({
+  ext: ['do', 'ado'],
+  mime: "text/x-stata",
+  mode: 'stata',
+  name: 'Stata'
+});
