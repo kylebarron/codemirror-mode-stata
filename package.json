@@ -28,7 +28,7 @@
   "author": "Kyle Barron <kylebarron2@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "codemirror": "^5.20.2"
+    "@jupyterlab/codemirror": "^0.19.1"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
